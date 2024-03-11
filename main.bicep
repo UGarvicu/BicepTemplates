@@ -76,6 +76,7 @@ var addressPrefix = '10.0.0.0/16'
 var subnetName = 'Subnet'
 var subnetPrefix = '10.0.0.0/24'
 var virtualNetworkName = 'MyVNET'
+var osDiskType = 'Standard_LRS'
 var networkSecurityGroupName = 'default-NSG'
 var securityProfileJson = {
   uefiSettings: {
@@ -218,7 +219,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
       osDisk: {
         createOption: 'FromImage'
         managedDisk: {
-          storageAccountType: 'StandardSSD_LRS'
+          storageAccountType: osDiskType
         }
       }
       dataDisks: [
