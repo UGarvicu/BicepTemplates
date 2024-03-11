@@ -130,19 +130,19 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2022-05-0
           sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
         }
-        {
-          name: 'default-allow-80'
-          properties: {
-            priority: 1100
-            access: 'Allow'
-            direction: 'Inbound'
-            destinationPortRange: '80'
-            protocol: 'Tcp'
-            sourcePortRange: '*'
-            sourceAddressPrefix: '*'
-            destinationAddressPrefix: '*'
-          }
-                  
+      }
+      {
+        name: 'default-allow-80'
+        properties: {
+          priority: 1100
+          access: 'Allow'
+          direction: 'Inbound'
+          destinationPortRange: '80'
+          protocol: 'Tcp'
+          sourcePortRange: '*'
+          sourceAddressPrefix: '*'
+          destinationAddressPrefix: '*'
+        }
       }
     ]
   }
